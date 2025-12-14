@@ -10,7 +10,7 @@ export default function Login() {
   async function handleLogin(e) {
     e.preventDefault();
 
-    const res = await fetch("http://127.0.0.1:5000/api/login", {
+    const res = await fetch("https://unimart-backend-9jbf.onrender.com/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email }), // only send email

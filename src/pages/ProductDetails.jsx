@@ -8,11 +8,11 @@ function ProductDetails() {
   const [moreProducts, setMoreProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/api/products/${id}`)
+    fetch(`https://unimart-backend-9jbf.onrender.com/api/products/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data));
 
-    fetch(`http://127.0.0.1:5000/api/products`)
+    fetch(`https://unimart-backend-9jbf.onrender.com/api/products`)
       .then(res => res.json())
       .then(data => setMoreProducts(data.filter(p => p.id !== parseInt(id)).slice(0, 4)));  
   }, [id]);
@@ -24,7 +24,7 @@ function ProductDetails() {
     const userId=localStorage.getItem("userId");
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/activity", {
+      const res = await fetch("https://unimart-backend-9jbf.onrender.com/api/activity", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId, product_id: product.id, action: "buy" }),
@@ -43,7 +43,7 @@ function ProductDetails() {
     const userId=localStorage.getItem("userId");
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/activity", {
+      const res = await fetch("https://unimart-backend-9jbf.onrender.com/api/activity", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId, product_id: product.id, action: "negotiate" }),

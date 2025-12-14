@@ -6,7 +6,7 @@ function Browse() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/products")
+    fetch("https://unimart-backend-9jbf.onrender.com/api/products")
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);

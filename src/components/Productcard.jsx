@@ -8,7 +8,7 @@ function ProductCard({ product }) {
     const userId=localStorage.getItem("userId");
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/activity", {
+      const res = await fetch("https://unimart-backend-9jbf.onrender.com/api/activity", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId, product_id: product.id, action: "view" }),
