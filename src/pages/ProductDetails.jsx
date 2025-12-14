@@ -104,14 +104,14 @@ function ProductDetails() {
           <div style={{ display: "flex", gap: "15px", marginTop: "auto" }}>
             <button
               style={primaryBtn}
-              onClick={() => alert("Buying isn’t live yet — join the waitlist!")}
+              onClick={handleBuy}
             >
               Buy Now
             </button>
 
             <button
               style={secondaryBtn}
-              onClick={() => alert("Negotiation coming soon — join the waitlist!")}
+              onClick={handleNegotiate}
             >
               Negotiate
             </button>
