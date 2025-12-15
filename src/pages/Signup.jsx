@@ -1,5 +1,4 @@
 import {useState} from "react";
-import logo from "../../static/images/logonobg.png";
 
 export default function Signup() {
     const [name, setName] = useState("");
