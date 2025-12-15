@@ -55,7 +55,7 @@ export default function Login() {
       }}
     >
       <h2 style={{ textAlign: "center", marginBottom: "8px" }}>
-        Login to UniMarket
+        Login to UniMart
       </h2>
 
       <input
