@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-
+import logo from '../assets/logo192.png';
 export default function Landing(){
     const navigate = useNavigate();
     return(
@@ -24,14 +24,7 @@ export default function Landing(){
           boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
         }}
       >
-          {/* <img
-          src="/logo192.png"
-          alt="Unimart logo"
-          style={{
-            width: "100px",
-            marginBottom: "20px",
-          }}
-        /> */}
+        <img src={logo} alt="Unimart Logo" style={{ width: "80px", marginBottom: "20px" }} />
 
         <h1 style={{ fontSize: "3rem", fontWeight: "700", marginBottom: "40px", color: "#4f46e5" }}>
           Unimart
